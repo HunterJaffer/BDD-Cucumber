@@ -12,7 +12,7 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  byebug
+  page.body =~ /[^#{e2}]*#{e1}.*#{e2}.*/
   #fail "Unimplemented"
 end
 

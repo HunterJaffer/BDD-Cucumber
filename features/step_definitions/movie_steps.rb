@@ -12,7 +12,8 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  fail "Unimplemented"
+  byebug
+  #fail "Unimplemented"
 end
 
 # Make it easier to express checking or unchecking several boxes at once
@@ -34,7 +35,10 @@ Then /I should( not)? see the following ratings: (.*)/ do |no,rating_list|
   end
 end
 
-Then /I should see all the movies/ do
+Then /I should see all of the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  fail "Unimplemented"
+  page.should have_selector('#movies tr', :count => 11)
+  #
+
+  #fail "Unimplemented"
 end

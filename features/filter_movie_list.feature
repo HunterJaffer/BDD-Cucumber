@@ -27,7 +27,6 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   When I press "Refresh"
   Then I should see the following ratings: PG, R
   And I should not see the following ratings: G, NC-18, PG-13
-  # enter step(s) to ensure that other movies are not visible
 
 Scenario: all ratings selected
   # see assignment
